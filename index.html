@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página inicial - Aulas</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      margin: 0
+    }
+
+    header {
+      background: #0b5fcc;
+      color: #fff;
+      padding: 20px 24px
+    }
+
+    main {
+      padding: 24px;
+      max-width: 900px;
+      margin: 20px auto
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px
+    }
+
+    a.card {
+      display: block;
+      padding: 16px;
+      border-radius: 8px;
+      background: #fff;
+      color: #0b5fcc;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(10, 20, 40, 0.06);
+      text-align: center;
+    }
+
+    a.card:hover {
+      box-shadow: 0 6px 18px rgba(10, 20, 40, 0.12)
+    }
+
+    footer {
+      padding: 18px 24px;
+      text-align: center;
+      color: #666;
+      font-size: 14px
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Repositório de Aulas - CSS 3</h1>
+  </header>
+
+  <main>
+
+    <p>Escolha um diretório para navegar pelo conteúdo:</p>
+
+    <section class="grid">
+      <a class="card" href="Parte 1 (Fundamentos e Box Model)/">Fundamentos e Box Model</a>
+      <a class="card" href="Parte 2 (Layouts e Posicionamento)/">Layouts e Posicionamento</a>
+      <a class="card" href="Parte 3 (Flexbox, Grid e Responsividade Inicial)/">Flexbox, Grid e Responsividade Inicial</a>
+    </section>
+
+  </main>
+
+  <footer>
+    Criado para facilitar a navegação
+  </footer>
+  
+</body>
+
+</html>

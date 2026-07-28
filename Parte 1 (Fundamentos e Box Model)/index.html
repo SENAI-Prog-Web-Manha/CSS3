@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - Parte 1 - Formularios</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form method="post">
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" name="nome_completo" id="nome_completo" placeholder="Digite seu nome completo..." required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" minlength="2" maxlength="3" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="senha_padrao">Senha Padrão:</label>
+                <input type="password" name="senha_padrao" id="senha_padrao">
+
+                <label for="escolaridade">Escolaridade:</label>
+                <select name="escolaridade" id="escolaridade">
+                    <option value="" selected>Informe a sua escolaridade</option>
+                    <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
+                    <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                    <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                </select>
+
+                <p>Informe o seu Sexo:</p>
+                <input type="radio" name="sexo" id="masculino" value="Masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino" value="Feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="sexo" id="null" value="Prefiro não dizer">
+                <label for="null">Prefiro não dizer</label>
+
+                <input type="checkbox" name="termos" id="termos">
+                <label for="termos">Aceito os termos do site</label>
+
+                <input type="checkbox" name="condicoes" id="condicoes">
+                <label for="condicoes">Aceito as condições do site</label>
+
+                <input type="submit" value="Enviar Dados">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
