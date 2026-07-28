@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #020024;
+    --gradient-60-color: #1e1e6b;
+    --gradient-100-color: #00004a;
+    --text-color: #CDCEEC;
+    --black-transparent: rgba(0, 0, 0, 0.8);
+    --black-transparent-2: rgba(0, 0, 0, 0.2);
+    --hover-bg: rgba(205, 206, 236, 0.15);
+}
+
+body {
+    background: var(--bg-color);
+    background: linear-gradient(45deg, var(--bg-color) 0%, var(--gradient-60-color) 60%, var(--gradient-100-color) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+/* ==========================================================
+   HEADER & BARRA DE NAVEGAÇÃO (.navbar, .main-menu, .sub-menu)
+   ========================================================== */
+header {
+    width: 100%;
+    background-color: var(--black-transparent);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.main-menu > li {
+    position: relative;
+}
+
+.main-menu a {
+    display: block;
+    padding: 18px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.main-menu a:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.03);
+    color: #ffffff;
+}
+
+/* Submenu Dropdown (Tutoriais) */
+.dropdown {
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--black-transparent);
+    backdrop-filter: blur(8px);
+    list-style: none;
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 10px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+
+    /* Oculto por padrão com transição */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sub-menu a {
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.sub-menu a:hover {
+    background-color: var(--hover-bg);
+    padding-left: 25px; /* Efeito de deslize ao passar o mouse */
+}
+
+/* ==========================================================
+   CONTEÚDO PRINCIPAL (MAIN, SEÇÕES E TABELA)
+   ========================================================== */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Seção Tutoriais */
+#tutoriais {
+    background-color: var(--black-transparent-2);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.20);
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+/* Tabela Estilizada (Mesmo visual de cartão escuro) */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--black-transparent-2);
+    border-radius: 16px;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.20);
+    overflow: hidden;
+}
+
+caption {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    text-align: left;
+    padding-left: 5px;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--black-transparent);
+}
+
+thead th {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(205, 206, 236, 0.1);
+}
+
+tbody tr {
+    transition: all 0.3s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.01);
+}
+
+tbody td {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tfoot {
+    background-color: var(--black-transparent);
+    font-weight: 600;
+}
+
+tfoot td {
+    border-top: 2px solid rgba(205, 206, 236, 0.1);
+    color: #ffffff;
+}

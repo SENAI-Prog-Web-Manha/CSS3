@@ -5,48 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 - Parte 1 - Formularios</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
+        <div class="card" id="info-login">
+            <h1>Smart Control</h1>
+            <h2>Login</h2>
+            <img src="assets/images/logo.png" alt="Logo Smart Control" style="border-radius: 50%; width: 20vw;">
+        </div>
         <div class="card">
-            <form method="post">
+            <form method="post" id="form-login">
                 <label for="nome_completo">Nome Completo:</label>
                 <input type="text" name="nome_completo" id="nome_completo" placeholder="Digite seu nome completo..." required>
 
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" minlength="2" maxlength="3" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" required>
-
-                <label for="senha_padrao">Senha Padrão:</label>
-                <input type="password" name="senha_padrao" id="senha_padrao">
+                <input type="text" name="cpf" id="cpf" minlength="14" maxlength="14" title="Ex: 123.456.789-10" inputmode="numeric" pattern="\d{3}.\d{3}.\d{3}-\d{2}" oninput="this.value = this.value.replace(/[^\d.-]/g, '')" placeholder="123.456.789-10" required>
 
                 <label for="escolaridade">Escolaridade:</label>
-                <select name="escolaridade" id="escolaridade">
-                    <option value="" selected>Informe a sua escolaridade</option>
+                <select name="escolaridade" id="escolaridade" required>
+                    <option value="" selected hidden>Informe a sua escolaridade</option>
                     <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
                     <option value="Ensino Médio Completo">Ensino Médio Completo</option>
                     <option value="Ensino Superior Completo">Ensino Superior Completo</option>
                 </select>
 
                 <p>Informe o seu Sexo:</p>
-                <input type="radio" name="sexo" id="masculino" value="Masculino">
-                <label for="masculino">Masculino</label>
-                <input type="radio" name="sexo" id="feminino" value="Feminino">
-                <label for="feminino">Feminino</label>
-                <input type="radio" name="sexo" id="null" value="Prefiro não dizer">
-                <label for="null">Prefiro não dizer</label>
+                <div class="form-group" id="sexo">
+                    <div class="form-opt">
+                        <input type="radio" name="sexo" id="masculino" value="Masculino" required>
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="form-opt">
+                        <input type="radio" name="sexo" id="feminino" value="Feminino">
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    <div class="form-opt">
+                        <input type="radio" name="sexo" id="null" value="Prefiro não dizer">
+                        <label for="null">Prefiro não dizer</label>
+                    </div>
+                </div>
 
-                <input type="checkbox" name="termos" id="termos">
-                <label for="termos">Aceito os termos do site</label>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
 
-                <input type="checkbox" name="condicoes" id="condicoes">
-                <label for="condicoes">Aceito as condições do site</label>
+                <label for="senha_padrao">Senha Padrão:</label>
+                <input type="password" name="senha_padrao" id="senha_padrao" minlength="8" required>
+
+                <div class="form-group" id="termos-e-condicoes">
+                    <div class="form-opt">
+                        <input type="checkbox" name="termos" id="termos" required>
+                        <label for="termos">Aceito os <a href="#termos">Termos</a> e <a href="#condicoes">Condições</a> do site</label>
+                    </div>
+                </div>
 
                 <input type="submit" value="Enviar Dados">
             </form>
         </div>
-    </div>
+    </main>
 </body>
 </html>

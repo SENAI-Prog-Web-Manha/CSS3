@@ -4,67 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 - Parte 2 - Estruturas Gerais e Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="main-menu">
-            <li><a href="https://google.com" target="_blank">Inicio</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            
-            <li class="dropdown">
-                <a href="#tutoriais">Tutoriais ▾</a>
+    <header>
+        <nav class="navbar">
+            <ul class="main-menu">
+                <li><a href="https://google.com" target="_blank">Inicio</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
                 
-                <ol class="sub-menu">
-                    <li><a href="#passo1">Iniciando</a></li>
-                    <li><a href="#passo2">Conceitos Gerais</a></li>
-                    <li><a href="#passo3">Técnicas Avançadas</a></li>
-                </ol>
-            </li>
-            <!-- https://mailtolinkgenerator.com/ -->
-            <!-- https://create.wa.link/ -->
-            <li><a href="mailto:teste@gmail.com?subject=Teste%20HTML5%20-%20Parte%202&body=Essa%20mensagem%20foi%20definida%20automaticamente%20para%20facilitar%20a%20filtragem.%0A%0A">E-mail</a></li>
-            <li><a href="tel:+5532999999999">Telefone</a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=5532999999999&text=Teste%20HTML5%20-%20Parte%202" target="_blank">WhatsApp</a></li>
-        </ul>
-    </nav>
-    <div id="tutoriais">
-        <p>Tutoriais</p>
-    </div>
-    <table>
-        <caption>Gestão do Time</caption>
-        
-        <thead>
-            <tr>
-                <th>Empregado</th>
-                <th>Departamento</th>
-                <th>Salario (Por Ano)</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>Jão Paulo</td>
-                <td>Engenheiro</td>
-                <td>R$85,000</td>
-            </tr>
-            <tr>
-                <td>Jane Silva</td>
-                <td>Estilista</td>
-                <td>R$82,000</td>
-            </tr>
-            <tr>
-                <td>Irineu</td>
-                <td>SENAI</td>
-                <td>R$12,000</td>
-            </tr>
-        </tbody>
-        
-        <tfoot>
-            <tr>
-                <td colspan="2">Pagamento Total</td>
-                <td>R$179,000</td>
-            </tr>
-        </tfoot>
-    </table>
+                <li class="dropdown">
+                    <a href="#tutoriais">Tutoriais ▾</a>
+                    
+                    <ol class="sub-menu">
+                        <li><a href="#passo1">Iniciando</a></li>
+                        <li><a href="#passo2">Conceitos Gerais</a></li>
+                        <li><a href="#passo3">Técnicas Avançadas</a></li>
+                    </ol>
+                </li>
+                <!-- https://mailtolinkgenerator.com/ -->
+                <!-- https://create.wa.link/ -->
+                <li><a href="mailto:teste@gmail.com?subject=Teste%20HTML5%20-%20Parte%202&body=Essa%20mensagem%20foi%20definida%20automaticamente%20para%20facilitar%20a%20filtragem.%0A%0A">E-mail</a></li>
+                <li><a href="tel:+5532999999999">Telefone</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5532999999999&text=Teste%20HTML5%20-%20Parte%202" target="_blank">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="tutoriais">
+            <p>Tutoriais</p>
+        </div>
+        <table>
+            <caption>Gestão do Time</caption>
+            
+            <thead>
+                <tr>
+                    <th>Empregado</th>
+                    <th>Departamento</th>
+                    <th>Salario (Por Ano)</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>Jão Paulo</td>
+                    <td>Engenheiro</td>
+                    <td>R$85,000</td>
+                </tr>
+                <tr>
+                    <td>Jane Silva</td>
+                    <td>Estilista</td>
+                    <td>R$82,000</td>
+                </tr>
+                <tr>
+                    <td>Irineu</td>
+                    <td>SENAI</td>
+                    <td>R$12,000</td>
+                </tr>
+            </tbody>
+            
+            <tfoot>
+                <tr>
+                    <td colspan="2">Pagamento Total</td>
+                    <td>R$179,000</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
 </body>
 </html>
