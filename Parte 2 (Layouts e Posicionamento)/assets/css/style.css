@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +27,6 @@ body {
     font-weight: 600;
     font-style: normal;
     min-height: 100vh;
-    padding-bottom: 40px;
 }
 
 /* ==========================================================
@@ -41,9 +42,8 @@ header {
 }
 
 .navbar {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 8px 20px;
 }
 
 .main-menu {
@@ -60,7 +60,7 @@ header {
 
 .main-menu a {
     display: block;
-    padding: 18px 20px;
+    padding: 10px 20px;
     color: var(--text-color);
     text-decoration: none;
     font-family: "Poppins", sans-serif;
@@ -130,12 +130,20 @@ main {
     gap: 30px;
 }
 
+main h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
 /* Seção Tutoriais */
 #tutoriais {
-    background-color: var(--black-transparent-2);
+    /* background-color: var(--black-transparent-2);
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.20); */
     text-align: center;
     font-size: 1.4rem;
     letter-spacing: 1px;
