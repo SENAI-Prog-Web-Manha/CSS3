@@ -229,6 +229,53 @@ tfoot td {
     display: none;
 }
 
+/* ==========================================================
+   RODAPÉ (FOOTER E MAPA)
+   ========================================================== */
+footer {
+    background-color: var(--black-transparent);
+    margin-top: 50px;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.4);
+}
+
+footer nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer nav li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+}
+
+footer nav li a:hover {
+    color: #ffffff;
+    padding-left: 6px;
+}
+
+/* Mapa iFrame Estilizado */
+footer iframe {
+    border-radius: 16px !important;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+footer iframe:hover {
+    transform: scale(1.02);
+}
+
 @media (max-width: 768px) {
     .toggle-icon {
         display: inline-block;
@@ -266,5 +313,13 @@ tfoot td {
 
     table {
         transform: scale(0.9);
+    }
+
+    footer {
+        justify-content: flex-start;
+    }
+
+    footer iframe {
+        width: 100%;
     }
 }
