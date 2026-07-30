@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #10b981;
+    --bg-color: #020024;
+    --gradient-60-color: #1e1e6b;
+    --gradient-100-color: #00004a;
+    --text-color: #CDCEEC;
+    --black-transparent: rgba(0, 0, 0, 0.8);
+    --black-transparent-2: rgba(0, 0, 0, 0.2);
+    --hover-bg: rgba(205, 206, 236, 0.15);
+}
+
+body {
+    background: var(--bg-color);
+    background: linear-gradient(45deg, var(--bg-color) 0%, var(--gradient-60-color) 60%, var(--gradient-100-color) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    min-height: 100vh;
+}
+
+.navbar-dark.bg-dark {
+    background-color: var(--bg-color) !important;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+    background-color: #059669 !important;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--black-transparent-2);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.20);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-subtitle{
+    color: var(--text-color) !important;
+}
+
+.card-header{
+    background-color: var(--black-transparent);
+    color: var(--text-color);
+    border-radius: 16px 16px 0 0 !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
+
+.table>:not(caption)>*>*{
+    background-color: var(--black-transparent-2);
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th, td {
+    padding: 16px 20px !important;
+    text-align: left !important;
+}
+
+.modal-content {
+    background-color: var(--black-transparent);
+    color: var(--text-color);
+}
+
+.modal-content > * {
+    border: none;
+}

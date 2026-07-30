@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 - Parte 2 - Estruturas Gerais e Links</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/3f21966000.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
+            <div class="toggle-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <ul class="main-menu">
                 <li><a href="https://google.com" target="_blank">Inicio</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
@@ -72,5 +76,26 @@
             </tfoot>
         </table>
     </main>
+    <script>
+        const mainMenu = document.querySelector('.main-menu');
+        function toggleMenu() {
+            mainMenu.style.visibility == '' ? mainMenu.style.visibility = 'hidden' : undefined;
+
+            if(mainMenu.style.visibility == 'hidden'){
+                mainMenu.style.opacity = '1';
+                mainMenu.style.visibility = 'visible';
+            } else {
+                mainMenu.style.opacity = '0';
+                mainMenu.style.visibility = 'hidden'
+            }
+        }
+
+        window.addEventListener('resize', (e) => {
+            if(mainMenu.style.visibility == 'hidden'){
+                mainMenu.style.opacity = '1';
+                mainMenu.style.visibility = 'visible';
+            }
+        })
+    </script>
 </body>
 </html>
