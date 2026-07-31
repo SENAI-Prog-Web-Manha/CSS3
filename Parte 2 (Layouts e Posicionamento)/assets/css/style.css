@@ -29,9 +29,6 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================
-   HEADER & BARRA DE NAVEGAÇÃO (.navbar, .main-menu, .sub-menu)
-   ========================================================== */
 header {
     width: 100%;
     background-color: var(--black-transparent);
@@ -76,7 +73,6 @@ header {
     color: #ffffff;
 }
 
-/* Submenu Dropdown (Tutoriais) */
 .dropdown {
     position: relative;
 }
@@ -93,7 +89,6 @@ header {
     padding: 10px 0;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
 
-    /* Oculto por padrão com transição */
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -116,12 +111,9 @@ header {
 
 .sub-menu a:hover {
     background-color: var(--hover-bg);
-    padding-left: 25px; /* Efeito de deslize ao passar o mouse */
+    padding-left: 25px;
 }
 
-/* ==========================================================
-   CONTEÚDO PRINCIPAL (MAIN, SEÇÕES E TABELA)
-   ========================================================== */
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -139,18 +131,12 @@ main h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Seção Tutoriais */
 #tutoriais {
-    /* background-color: var(--black-transparent-2);
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.20); */
     text-align: center;
     font-size: 1.4rem;
     letter-spacing: 1px;
 }
 
-/* Tabela Estilizada (Mesmo visual de cartão escuro) */
 table {
     width: 100%;
     border-collapse: separate;
@@ -221,7 +207,6 @@ tfoot td {
 .toggle-icon:hover{
     box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0.30);
     border-radius: 16px;
-    /* border: 1px solid var(--text-color); */
     cursor: pointer;
 }
 
@@ -229,9 +214,6 @@ tfoot td {
     display: none;
 }
 
-/* ==========================================================
-   RODAPÉ (FOOTER E MAPA)
-   ========================================================== */
 footer {
     background-color: var(--black-transparent);
     margin-top: 50px;
@@ -265,7 +247,6 @@ footer nav li a:hover {
     padding-left: 6px;
 }
 
-/* Mapa iFrame Estilizado */
 footer iframe {
     border-radius: 16px !important;
     box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.5);
