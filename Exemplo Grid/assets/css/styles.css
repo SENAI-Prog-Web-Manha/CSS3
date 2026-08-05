@@ -109,7 +109,7 @@ body {
 .hide {
     display: none;
 }
-/* 
+
 @media (max-width: 768px) {
     .sidebar-expanded {
         grid-template-columns: auto;
@@ -120,4 +120,4 @@ body {
             "footer";
         
     }
-} */
+}
